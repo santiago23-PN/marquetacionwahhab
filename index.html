@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ExamenU3</title>
+    <link rel="stylesheet" href="estilo.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="contenedor_cabecera">
+      <div class="contenedor_logo">
+        <img src="images/logo_arriba.png" alt="logo empresa" />
+      </div>
+      <div class="contenedor_menu">
+        <a href="#">SEO Services</a>
+        <a href="#">Guaranteeed</a>
+        <a href="#">Princing</a>
+        <a href="#">Contacts</a>
+        <a href="#" class="btn_1">FREO SEO AUDIT</a>
+      </div>
+    </div>
+    <div class="contenedor_imagen">
+      <br /><br /><br /><br /><br />
+      <h1 class="tituloprincipal">
+        Heating <span class="span1">Air</span> Condition
+        <br />
+        Residential Service
+      </h1>
+      <br />
+      <p class="parrafo">A Theme for AC, Repair & Plumbing etc.</p>
+      <br />
+      <a class="btn-naranja btn-izq" href="#">Read More</a>
+      <a class="btn-naranja" href="#">Contact us</a>
+    </div>
+    <br />
+    <div class="contenedor_formulario" id="in">
+      <br /><br /><br /><br />
+      <form id="booking_form">
+        <div class="contenedor_label">
+          <label>Online<br />Booking</label>
+        </div>
+        <div class="contenedor_input">
+          <input type="text" placeholder="* Your Name" id="nombre" />
+          <input type="tel" id="telefono" placeholder="* Your Phone" />
+          <select id="servicio">
+            <option value="">Service Name</option>
+            <option value="ac">AC Repair</option>
+            <option value="plumbing">Plumbing</option>
+            <option value="maintenance">Maintenance</option>
+          </select>
+          <button type="submit" id="btn_enviar">Book Now</button>
+        </div>
+      </form>
+    </div>
+    <!-- En el formulario intenté poner el required, pero no funciona la validacion si los campos tienen el requires, lo que yo queria era que soltara el mensaje de script xd. -->
+    <script>
+      $("#booking_form").submit(function (event) {
+        event.preventDefault();
+        const nombre = $("#nombre").val().trim();
+        const telefono = $("#telefono").val().trim();
+        const servicio = $("#servicio").val();
+        if (nombre === "") {
+          alert("Escribe tu nombre");
+          $("#nombre").focus();
+          return false;
+        }
+        if (telefono === "") {
+          alert("No escribiste tu teléfono");
+          $("#telefono").focus();
+          return false;
+        }
+        if (servicio === "") {
+          alert("Selecciona un servicio");
+          $("#servicio").focus();
+          return false;
+        }
+        alert("Formulario enviado correctamente");
+      });
+    </script>
+    <div class="contenedor_our">
+      <br /><br />
+      <p class="naranja">Our Service</p>
+      <h2 class="titulosecundario">
+        We are Interested for Your <span class="span1">Air</span> Conditional
+        <br />
+        Service
+      </h2>
+      <br /><br /><br />
+      <div class="contenedor_tarjeta">
+        <img src="images/fotoservicio1.jpg" alt="Heating Service" />
+
+        <div class="contenido_servicio">
+          <br />
+          <div class="icono_servicio">
+            <img src="images/iconoservicios1.jpg" alt="icono calor" />
+          </div>
+          <br />
+          <h3>Heating Service</h3>
+          <p>
+            It was popularised in the 1960s with the release of Letraset sheets.
+          </p>
+          <br />
+          <a href="#">READ MORE</a>
+        </div>
+        <br />
+      </div>
+      <div class="contenedor_tarjeta">
+        <img src="images/fotoservicio2.jpg" alt="Warehouse Service" />
+        <div class="contenido_servicio">
+          <br />
+          <div class="icono_servicio">
+            <img src="images/iconoservicios2.jpg" alt="icono almacen" />
+          </div>
+          <br />
+          <h3>Warehouse Service</h3>
+          <p>
+            It was popularised in the 1960s with the release of Letraset sheets.
+          </p>
+          <br />
+          <a href="#">READ MORE</a>
+        </div>
+        <br />
+      </div>
+      <div class="contenedor_tarjeta">
+        <img src="images/fotoservicio3.jpg" alt="Cooling Service" />
+        <div class="contenido_servicio">
+          <br />
+          <div class="icono_servicio">
+            <img src="images/iconoservicios3.jpg" alt="icono frio" />
+          </div>
+          <br />
+          <h3>Cooling Service</h3>
+          <p>
+            It was popularised in the 1960s with the release of Letraset sheets.
+          </p>
+          <br />
+          <a href="#">READ MORE</a>
+        </div>
+        <br />
+      </div>
+      <br /><br />
+    </div>
+    <br /><br />
+    <div class="contenedor_marquee">
+      <br /><br /><br />
+      <marquee
+        class="caja1"
+        behavior="scroll"
+        direction="left"
+        scrollamount="5"
+        onmouseover="this.stop()"
+        onmouseout="this.start()"
+      >
+        <img src="images/icono2.jpeg" alt="icono" />
+        <img src="images/icono3.jpeg" alt="icono" />
+        <img src="images/icono4.jpeg" alt="icono" />
+        <img src="images/icono5.jpeg" alt="icono" />
+        <img src="images/icono1.jpeg" alt="icono" />
+      </marquee>
+    </div>
+
+    <br /><br />
+    <div class="contenedor_about">
+      <div class="about_texto">
+        <br />
+        <p class="naranja">About Us</p>
+        <h2 class="titulosecundario">
+          How to Repair <span class="span1">AC</span> Good Solution of Most
+          Popular Company
+        </h2>
+        <br />
+        <p class="parrafo1">
+          If you are going to use a passage of Lorem Ipsum, you need to be sure
+          there isn't anything embarrassing hidden in the middle of text.
+        </p>
+        <br />
+        <p>
+          Web page editors now use Lorem Ipsum as their default model text, and
+          a search for 'lorem ipsum' will uncover many web sites still in their
+          days.
+        </p>
+        <br />
+        <div class="about_icono">
+          <div class="icono">
+            <img src="images/flecha.png" />
+            <div>
+              <p class="parrafo2">9875</p>
+              <p class="parrafo3">Project Completed</p>
+            </div>
+          </div>
+          <div class="icono">
+            <img src="images/carita_feliz.png" />
+            <div>
+              <p class="parrafo2">10245</p>
+              <p class="parrafo3">Happy Customer</p>
+            </div>
+          </div>
+        </div>
+        <br /><br />
+      </div>
+      <div class="about_video">
+        <iframe
+          class="video"
+          src="https://www.youtube.com/embed/GAQDKGcUR3Y?si=-9uKm8sObuh3Zubb"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+    <br /><br /><br />
+    <div class="contenedor_precios">
+      <div class="contenedor_titulo">
+        <p class="naranja">Prices</p>
+        <h2 class="titulosecundario">
+          Why you should Choose our service <br /><span class="span1"
+            >Repair</span
+          >
+          of AC
+        </h2>
+      </div>
+      <br /><br />
+      <table class="tabla">
+        <tr>
+          <th>Servicio</th>
+          <th>Tiempo</th>
+          <th>Precio</th>
+          <th>IVA</th>
+        </tr>
+        <tr>
+          <td>Mantenimiento Básico</td>
+          <td class="fondogris">1 día</td>
+          <td class="fondogris">$2,000.00</td>
+          <td rowspan="3">
+            TODOS NUESTROS <br />PRECIO SON MÁS IVA <br />(16%)
+          </td>
+        </tr>
+        <tr>
+          <td>Mantenimiento Intermedio</td>
+          <td class="fondogris">2 días</td>
+          <td class="fondogris">$3,500.00</td>
+        </tr>
+        <tr>
+          <td>Mantenimiento Completo</td>
+          <td class="fondogris">3 días</td>
+          <td class="fondogris">$1,000.00</td>
+        </tr>
+      </table>
+      <br />
+    </div>
+    <br /><br /><br />
+    <div class="contenedor_final">
+      <br /><br /><br /><br />
+      <div class="contenedor_wahhab">
+        <h3 class="titulosecundario2">Wahhab Company</h3>
+        <hr />
+        <br />
+        <p class="parrafo4">
+          Lorem ipsum dolor sit amet consectetur adipiscing elit.<br />sed
+          eiusmod dolor.
+        </p>
+      </div>
+      <div class="contenedor_redes">
+        <h3 class="titulosecundario2">Follow Us</h3>
+        <div class="icono_redes">
+          <a href="#"><img src="images/icono_facebook.jpg" alt="fb" /></a>
+          <a href="#"><img src="images/icono_linkeding.jpg" alt="yt" /></a>
+          <a href="#"><img src="images/icono_twitter.jpg" alt="tw" /></a>
+        </div>
+      </div>
+    </div>
+    <div class="contenedor_nombre">
+      <br />
+      <p>Santiago Antonio Suarez Luna</p>
+      <p>Programación Web</p>
+      <p>7SB</p>
+    </div>
+  </body>
+</html>
